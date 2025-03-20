@@ -1,0 +1,42 @@
+<html>
+<title>User Registration Forms</title>
+<head><h2>Registration Form</h2>
+<body style="background-color:yellow">
+<form>
+<fieldset>
+<legend>Personal Information:</legend>
+<h3>Age of the employee</h3>
+<input type="number" id="age" name="age" min="1" max="60"><br><br>
+<h4>Date of birth</h4>
+<input type="date" id="dob" name="dob"><br><br>
+<h4>Birth month</h4>
+<input type="month" id="mon" name="mon"><br><br></fieldset>
+<fieldset>
+<legend>Appointment details:</legend>
+<h5>Appointment date and time</h5>
+<input type="datetime-local" id="ap" name="ap" min="2000-01-01" max="2026-06-30"><br><br>
+<h4>Satisfaction Level</h4>
+<input type="range" id="tech" name="tech" min="1" max="10"><br><br>
+<h4>Search field></h4>
+<input type="search" id="s" name="s"><br><br>
+<h4>Country</h4>
+<input type="radio" id="C1" name="c1" value="Australia">
+<label for="C1">Australia</label>
+<input type="radio" id="C2" name="c2" value="England">
+<label for="C2">England</label>
+<input type="radio" id="C3" name="c3" value="Japan">
+<label for="C3">Japan</label>
+<input type="radio" id="C1" name="c1" value="India">
+<label for="C1">India</label>
+<input type="radio" id="C2" name="c2" value="Canada">
+<label for="C2">Canada</label>
+<input type="radio" id="C3" name="c3" value="New Zealand">
+<label for="C3">New Zealand</label>
+<br>
+<br></fieldset>
+<button type="submit" value="Submit" onclick="alert('Form submitted successfully')">submit</button><br><br>
+<button type="reset" value="Reset"autofocus></button>
+</Form>
+</body>
+</head>
+</html>

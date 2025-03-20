@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://wallpapercave.com/wp/WUvFcij.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            color: white;
+        }
+        header {
+            background-color: rgba(255, 102, 0, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: white;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>Did You Know? Fun Facts!</header>
+    <div class="container">
+        <h2>Click the button to reveal a fun fact!</h2>
+        <img id="factImage" src="https://img.freepik.com/free-vector/cartoon-fun-fact-background-design_52683-79214.jpg" alt="Fun Facts">
+        <p id="fact">🔍 Press the button to learn something cool!</p>
+        <button onclick="showFact('animals')">Animals</button>
+        <button onclick="showFact('space')">Space</button>
+        <button onclick="showFact('science')">Science</button>
+        <button onclick="showFact('history')">History</button>
+    </div>
+
+    
+
+
+    <script>
+        const facts = {
+            animals: [
+                {text: "Octopuses have three hearts and their blood is blue! 🐙💙", img: "https://i.natgeofe.com/n/d54c13f4-7165-4122-909a-85bdccb85f5c/10709466.jpg"},
+                {text: "Wombat poop is cube-shaped to prevent it from rolling away! 🦡🟫", img: "https://wallpapercave.com/wp/wp2687817.jpg"},
+                {text: "There’s a species of jellyfish that is biologically immortal – it never dies of old age! 🦠♾️", img: "https://img.freepik.com/premium-photo/amazing-photography-majestic-neon-fluorescent-jellyfish_692702-26461.jpg"},
+                {text: "Gummy bears were originally called 'dancing bears'! 🐻💃", img: "https://i.pinimg.com/736x/f6/d3/2c/f6d32c6a49ced6dd7ab6d68c4922e87e--teddy-bears-picnic-dance-moves.jpg"}
+            ],
+            space: [
+                {text: "A day on Venus is longer than a year on Venus due to its slow rotation! 🌍⏳", img: "https://wallpaperaccess.com/full/1771196.jpg"},
+                {text: "Galaxies can “eat” other galaxies 🌌", img: "https://www.pixelstalk.net/wp-content/uploads/2016/08/Andromeda-Galaxy-Milky-Way.jpg"},
+                {text: "If you scream in space, no one can hear you 😱🤣", img: "https://wallpapercave.com/wp/wp2293485.jpg"},
+                {text: "Astronauts need to wear a special type of diaper!!! 🧷😆", img: "https://i2.pickpik.com/photos/35/363/809/space-suit-astronaut-isolated-nasa-preview.jpg"}
+            ],
+            science: [
+                {text: "Water can boil and freeze at the same time in a process called the 'triple point'! 💧🔥❄️", img: "https://thumbs.dreamstime.com/z/boiling-evaporation-freezing-melting-points-water-boiling-evaporation-freezing-melting-points-water-213029427.jpg"},
+                {text: "Your brain generates enough electricity to power a lightbulb! 💡🧠", img: "https://neurosciencenews.com/files/2023/07/electrical-activity-memory-neurosicenes.jpg"},
+                {text: "Sharks existed before trees – over 400 million years ago! 🦈🌳", img: "https://snowbrains.com/wp-content/uploads/2015/01/Seapics-GWS3.jpg"},
+                {text: "Blushing is an automatic sensory reaction only experienced by humans 😊👱", img: "https://static-00.iconduck.com/assets.00/hand-over-mouth-blushing-face-emoji-2006x2048-snku8nv5.png"}
+            ],
+            history: [
+                {text: "Honey never spoils – archaeologists found 3,000-year-old honey in Egyptian tombs that’s still good! 🍯", img: "https://www.thehealthjournals.com/wp-content/uploads/2019/04/honey-878x1024.jpg"},
+                {text: "The Eiffel Tower grows in summer – it expands by up to 6 inches due to heat! 🌞🗼", img: "https://activerain-store.s3.amazonaws.com/blog_entries/624/5806624/original/Did_You_Know_That_the_Eiffel_Tower_Grows_Taller_in_Summer.jpg?1694004988"},
+                {text: "Dragonflies have six legs but cannot walk 🐉👩‍🦽", img: "https://www.pixelstalk.net/wp-content/uploads/2016/05/Dragon-Wallpapers-Full-HD-Pictures.jpg"},
+                {text: "A musician named Jim mysteriously disappeared 6 years after recording an album called UFO 👽🛸", img: "https://wallpapercave.com/wp/wp6849896.jpg"}
+            ]
+        };
+
+        function showFact(category) {
+            let randomIndex = Math.floor(Math.random() * facts[category].length);
+            document.getElementById("fact").innerText = facts[category][randomIndex].text;
+            document.getElementById("factImage").src = facts[category][randomIndex].img;
+		}
+    </script>
+	<div class="audio-player">
+    <h3>****Laugh Laugh Laugh****<br> Laugh free! Stress Free!! Disease Free!!!<br></h3>
+    <audio controls autoplay loop>
+        <source src="laugh.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+</body>
+</html>
+
