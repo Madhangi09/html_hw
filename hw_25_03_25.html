@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Light Toggle</title>
+    <style>
+        body {
+            text-align: center;
+            transition: background-color 1s;
+            background-color: #111;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .light-bulb {
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: background-color 1s, box-shadow 1s;
+            position: relative;
+        }
+        .light-on {
+            background-color: yellow;
+            box-shadow: 0 0 40px yellow;
+            animation: flicker 0.2s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.9; }
+        }
+        .switch {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            background: gray;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="light-bulb" id="bulb"></div>
+        <button class="switch" id="toggleBtn">Turn On</button>
+    </div>
+
+    <script>
+        const bulb = document.getElementById('bulb');
+        const button = document.getElementById('toggleBtn');
+        let isOn = false;
+
+        button.addEventListener('click', () => {
+            isOn = !isOn;
+            if (isOn) {
+                bulb.classList.add('light-on');
+                document.body.style.backgroundColor = '#444';
+                button.textContent = 'Turn Off';
+            } else {
+                bulb.classList.remove('light-on');
+                document.body.style.backgroundColor = '#111';
+                button.textContent = 'Turn On';
+            }
+        });
+    </script>
+</body>
+</html>
