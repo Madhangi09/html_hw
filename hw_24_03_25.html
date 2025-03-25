@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: coral;
+        }
+        .container {
+            position: relative;
+        }
+        .card {
+            position: relative;
+            width: 300px;
+            background: beige;
+            padding: 70px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            overflow: hidden;
+            z-index: 1;
+            border: 2px solid blue;
+            margin: 30px;
+            height: 150px;
+        }
+        .badge {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: brown;
+            color: yellow;
+            padding: 30px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 3;
+        }
+        .background-box {
+            position: absolute;
+            left: -15px;
+            top: 50px;
+            width: 70%;
+            height: 100px;
+            background: yellowgreen;
+            border: 2px solid indigo;
+            z-index: 2;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 20px;
+            color: seashell;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background-box"></div>
+        <div class="card">
+            <div class="badge">Company Name</div>
+            <h2>Madzzz!!!</h2>
+            <p>Web Developer</p>
+            <p>www.example.com</p>
+            <div class="social-icons">
+                <a href="#">🔵</a>
+                <a href="#">🔴</a>
+                <a href="#">🟢</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
