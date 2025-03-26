@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+            margin: 0;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            width: 200px;
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .circle img {
+            border-radius: 50%;
+        }
+        .ellipse img {
+            width: 100%;
+            height: 120px;
+            border-radius: 50% / 30%;
+        }
+        .polygon img {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wildlife Image Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item circle">
+            <img src="https://facts.net/wp-content/uploads/2023/05/bengal-tiger.jpeg" alt="Tiger">
+            <p class="description">The majestic tiger, the largest cat species.</p>
+        </div>
+        <div class="gallery-item ellipse">
+            <img src="https://i.pinimg.com/originals/00/56/2b/00562b60962483888335f33f23d78374.jpg" alt="Elephant">
+            <p class="description">Elephants are known for their intelligence and memory.</p>
+        </div>
+        <div class="gallery-item polygon">
+            <img src="https://wallpapercave.com/wp/mLznQd5.jpg" alt="Wolf">
+            <p class="description">Wolves are social animals living in packs.</p>
+        </div>
+        <div class="gallery-item circle">
+            <img src="https://ah-cms.hideawayreport.com/images/wildlife-safari-seeing-lion-kenya-masai-mara-inline-1.jpg" alt="Lion">
+            <p class="description">Lions are often called the kings of the jungle.</p>
+        </div>
+        <div class="gallery-item ellipse">
+            <img src="https://i.dailymail.co.uk/i/pix/2014/12/18/2423FC6000000578-0-image-a-35_1418913026448.jpg" alt="Polar bear">
+            <p class="description">The polar bear is a large bear native to the Arctic and nearby areas.</p>
+        </div>
+        <div class="gallery-item polygon">
+            <img src="https://images6.fanpop.com/image/photos/34900000/Cute-Panda-Bears-animals-34915026-1600-1200.jpg" alt="Panda">
+            <p class="description">Pandas love eating bamboo and are very playful.</p>
+        </div>
+    </div>
+</body>
+</html>

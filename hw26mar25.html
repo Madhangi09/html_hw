@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members Profile Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+        }
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .team-card h3 {
+            margin: 10px 0 5px;
+        }
+        .team-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <div class="team-card">
+            <img src="https://img.freepik.com/premium-photo/memoji-emoji-handsome-smiling-man-white-background_826801-6999.jpg" alt="John Doe">
+            <h3>Bala</h3>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="team-card">
+            <img src="https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6879.jpg" alt="Jane Smith">
+            <h3>Kama</h3>
+            <p>Chief Marketing Officer</p>
+        </div>
+        <div class="team-card">
+            <img src="https://img.freepik.com/premium-photo/audiologist-digital-avatar-generative-ai_934475-9039.jpg" alt="Robert Brown">
+            <h3>Anirudh</h3>
+            <p>Lead Developer</p>
+        </div>
+        <div class="team-card">
+            <img src="https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6869.jpg?w=2000" alt="Emily Davis">
+            <h3>Blacky</h3>
+            <p>UI/UX Designer</p>
+        </div>
+    </div>
+</body>
+</html>
